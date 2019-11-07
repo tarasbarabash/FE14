@@ -1,0 +1,13 @@
+ógaüø®Òû¤EÛ§@qùÀ¨t¢wõÅæP1!½{P_0GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1
+Host: gaia.cs.umass.edu
+Connection: keep-alive
+Cache-Control: max-age=0 ;время за которое кеш считается актуальным
+DNT: 1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36 ;браузер клиента
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 ; mime-типи, которые ожидает браузер
+Accept-Encoding: gzip, deflate ;поддерживаемые технологии архивирования ответа
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6 ;список языков с коэф. приоритета
+If-None-Match: "2ca-596bc33423538"
+If-Modified-Since: Thu, 07 Nov 2019 06:59:01 GMT
+
