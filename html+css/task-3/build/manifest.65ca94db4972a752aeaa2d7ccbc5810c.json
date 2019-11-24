@@ -1,33 +1,33 @@
 {
   "icons": [
     {
-      "src": "icon_512x512.59f0b660e03604776a880e238a7d7a45.png",
+      "src": "icon_512x512.d662494b1015e879366b2b6dfaab9a37.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "icon_384x384.2d4a301785a28270ea35eeb97ad6fb63.png",
+      "src": "icon_384x384.30e2fe5402a66949d7261b4fe8893f30.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "icon_152x152.c60dd58efc7bc2072ea74cdd5f9dff27.png",
+      "src": "icon_152x152.d8b53b1468b0639173455b15e26b2581.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "icon_128x128.08e2e9de8f9d25c82229f2b3309b2454.png",
+      "src": "icon_128x128.f9a9a1feb32086a469fada4081465488.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "icon_72x72.2329b7e53eb1ecb6b0425cc905d1197b.png",
+      "src": "icon_72x72.e239302711bf6f396bab79084dee251b.png",
       "sizes": "72x72",
       "type": "image/png"
     }
   ],
   "name": "Claire Foy",
-  "short_name": "Foy-Task-3",
+  "short_name": "Claire Foy",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "index.html",

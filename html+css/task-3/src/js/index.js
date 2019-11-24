@@ -1,3 +1,5 @@
+import "./theme";
+
 const showTemplateBtn = document.querySelector("#showTemplate");
 
 showTemplateBtn.addEventListener("click", () => {

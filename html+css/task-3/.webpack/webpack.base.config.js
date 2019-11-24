@@ -7,7 +7,7 @@ const { InjectManifest } = require("workbox-webpack-plugin");
 const WebpackManifestPlugin = require("webpack-pwa-manifest");
 
 const APP_NAME = "Claire Foy";
-const SHORT_NAME = "Foy-Task-3";
+const SHORT_NAME = "Claire Foy";
 const APP_DESCRITION = "Claire Foy Demo Project";
 
 const PATHS = {

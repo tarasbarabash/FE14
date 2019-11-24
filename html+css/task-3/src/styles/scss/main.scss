@@ -4,12 +4,19 @@
 
 html {
   scroll-behavior: smooth;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+}
+
+::selection {
+  background-color: var(--main-color);
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  transition: all 1s ease-in-out 0s;
 }
 
 section {
@@ -27,12 +34,16 @@ section {
 main {
   padding-top: $header-height;
   flex-grow: 1;
+
+  @media (max-height: $min-xs-height) {
+    padding-top: 0px;
+  }
 }
 
 mark {
   font-size: 1.2rem;
   padding: 2px;
-  background-color: $main-color;
+  background-color: var(--main-color);
   font-weight: $bold-text-weight;
 }
 
@@ -40,7 +51,7 @@ a,
 a:visited,
 a:hover {
   display: inline-block;
-  color: $main-link-color;
+  color: var(--main-link-color);
   text-decoration: none;
 }
 
@@ -88,12 +99,14 @@ p {
 h2 {
   font-family: $header-font;
   margin-bottom: $main-dimen;
+  color: var(--main-text-color);
   font-size: 2rem;
 }
 
 figcaption {
   padding: $main-dimen;
   text-align: center;
+  line-height: 1.5em;
 }
 
 .container {
@@ -114,7 +127,7 @@ dialog {
   width: 100%;
   height: 100%;
   border: none;
-  background-color: $overlay-color;
+  background-color: var(--overlay-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,13 +141,13 @@ dialog {
   flex-direction: row;
 
   .deny {
-    background-color: $reject-color;
+    background-color: var(--reject-color);
   }
 }
 
 nav {
   z-index: 2;
-  background-color: $overlay-color;
+  background-color: var(--overlay-color);
   position: fixed;
   width: 100%;
   display: flex;
@@ -143,8 +156,12 @@ nav {
   height: $header-height;
   transition: all 0.5s ease-in-out;
 
+  @media (max-height: $min-xs-height) {
+    position: relative;
+  }
+
   &:hover {
-    background-color: $nav-color;
+    background-color: var(--nav-color);
   }
 
   .logo {
@@ -152,15 +169,33 @@ nav {
     font-size: 1.7rem;
     text-align: center;
     padding: $main-dimen;
+    display: flex;
 
     a {
       transition: all 0.2s ease-in-out;
     }
 
     a:hover {
-      color: $dark-main-color;
+      color: var(--dark-main-color);
       &::after {
-        border: $anchor-border solid $dark-main-color;
+        border: $anchor-border solid var(--dark-main-color);
+      }
+    }
+
+    .mode {
+      cursor: pointer;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      justify-self: flex-start;
+      border-radius: 50%;
+
+      &.light {
+        background-color: #efefef;
+      }
+
+      &.dark {
+        background-color: #212121;
       }
     }
   }
@@ -217,7 +252,7 @@ table {
   tr,
   td,
   th {
-    border: 1px solid black;
+    border: 1px solid var(--main-text-color);
     padding: $main-dimen;
     vertical-align: middle;
     text-align: center;
@@ -241,10 +276,11 @@ table {
 
   textarea {
     height: 200px;
-    border: 1px solid black;
+    border: 3px solid var(--main-color);
     border-radius: 5px;
-    font-size: 1.2rem;
+    background-color: var(--background-color);
     resize: none;
+    color: var(--text-color);
     padding: $main-dimen;
     font-family: $main-font;
 
@@ -255,11 +291,10 @@ table {
 
   input[type="text"] {
     border-radius: 5px;
-    border: 1px solid black;
-    height: 1.5rem;
-    font-size: 1.5rem;
+    border: 3px solid var(--main-color);
+    background-color: var(--background-color);
     padding: 1rem;
-
+    color: var(--text-color);
     &:focus {
       outline: none;
     }
@@ -276,12 +311,11 @@ button {
   cursor: pointer;
   margin: $main-dimen 0px;
   padding: 12px;
-  background: $main-color;
+  background: var(--main-color);
   border: none;
   border-radius: 8px;
   font-weight: $bold-text-weight;
   min-width: $btn-min-width;
-
   transition: all 1s;
 
   &:focus {
@@ -289,11 +323,11 @@ button {
   }
 
   &:hover {
-    background: $dark-main-color;
+    background: var(--dark-main-color);
   }
 
   &:disabled {
-    background-color: $disabled-color;
+    background-color: var(--disabled-color);
   }
 }
 
@@ -301,7 +335,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $dark-main-color;
+  background-color: var(--footer-color);
 
   .container {
     align-items: center;
@@ -319,7 +353,7 @@ a {
     visibility: none;
     transition: all 0.2s ease-in-out 0.2s;
     visibility: hidden;
-    border-bottom: $anchor-border solid $main-color;
+    border-bottom: $anchor-border solid var(--main-color);
     transform: scale(0);
   }
 
