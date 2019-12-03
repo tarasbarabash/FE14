@@ -25,6 +25,7 @@ const onToggleClick = () => {
 
 const toggleTheme = () => {
   const theme = document.documentElement.getAttribute("data-theme");
+  document.documentElement.classList = "animate";
   const mode = document.querySelector("#mode");
 
   if (theme) {
@@ -36,6 +37,8 @@ const toggleTheme = () => {
     mode.className = "mode light";
     localStorage.setItem("mode", JSON.stringify({ dark: true }));
   }
+
+  setTimeout(() => (document.documentElement.classList = ""), 1000);
 };
 
 detectTheme();

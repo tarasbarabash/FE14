@@ -22,7 +22,8 @@ $colors: (
   disabled-color: lightgray,
   main-link-color: black,
   background-color: white,
-  footer-color: darken(wheat, 20)
+  footer-color: darken(wheat, 20),
+  nav-shadow-color: rgba(212, 212, 212, 0.75)
 );
 
 $dark-colors: (
@@ -35,7 +36,8 @@ $dark-colors: (
   disabled-color: lightgray,
   main-link-color: white,
   background-color: #121212,
-  footer-color: rgb(42, 42, 42)
+  footer-color: rgb(42, 42, 42),
+  nav-shadow-color: rgba(0, 0, 0, 1)
 );
 
 :root {

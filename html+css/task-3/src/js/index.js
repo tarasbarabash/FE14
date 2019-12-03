@@ -13,16 +13,17 @@ showTemplateBtn.addEventListener("click", () => {
 document.querySelector("#confirm").addEventListener("click", () => {
   document.querySelector("form").submit();
 });
-document.querySelector("#deny").addEventListener("click", () => {
-  document.querySelector("dialog").style.transform = "scale(0)";
-  document.querySelector("dialog").style.visibility = "hidden";
-});
+document
+  .querySelector("#deny")
+  .addEventListener(
+    "click",
+    () => (document.querySelector("dialog").classList = "dialog_hidden")
+  );
 
 document.querySelector("#send-feedback").addEventListener("click", e => {
   if (!document.querySelector("form").checkValidity()) return false;
   e.preventDefault();
-  document.querySelector("dialog").style.transform = "scale(1)";
-  document.querySelector("dialog").style.visibility = "visible";
+  document.querySelector("dialog").classList = "dialog_visible";
 });
 
 const canvas = document.querySelector("canvas");
