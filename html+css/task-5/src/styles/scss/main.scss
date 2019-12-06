@@ -1,0 +1,59 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./slides.scss";
+@import "./nav.scss";
+@import "./benefits.scss";
+
+body {
+  margin: 0px;
+  min-height: 100%;
+}
+
+main {
+  padding-top: $nav-height;
+  min-height: 100%;
+}
+
+footer {
+  position: relative;
+  background-color: aquamarine;
+  height: $footer-height;
+}
+
+.container {
+  flex-direction: inherit;
+  width: 90%;
+
+  @media screen and (min-width: $max-width) {
+    max-width: $max-width;
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  background: var(--section-bg);
+}
+
+.action-btn {
+  background-color: var(--main-color);
+  padding: 16px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+
+mark {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
