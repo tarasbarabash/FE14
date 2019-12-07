@@ -1,0 +1,206 @@
+header {
+  height: $nav-height;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #burger {
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0;
+    position: absolute;
+    right: 4%;
+    top: 30px;
+    height: 35px;
+    width: 35px;
+
+    &:hover ~ .burger {
+      width: 30px;
+
+      &:after {
+        width: 35px;
+      }
+      &::before {
+        width: 25px;
+      }
+    }
+
+    &:checked:hover ~ .burger {
+      &:after {
+        width: 35px;
+      }
+      &::before {
+        width: 35px;
+      }
+    }
+  }
+
+  .burger {
+    z-index: 3;
+    width: 28px;
+    height: 3px;
+    position: relative;
+    background: var(--text-color);
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (min-width: $max-width) {
+      display: none;
+    }
+
+    &::before,
+    &:after {
+      width: 28px;
+      height: 3px;
+      background: var(--text-color);
+      position: absolute;
+      transition: all 0.2s ease-in-out;
+      content: "";
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+
+  #burger:checked {
+    & ~ .nav-container {
+      visibility: visible;
+      transform: scaleY(1);
+    }
+
+    & ~ .burger {
+      transform: rotate(180deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      &::after {
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
+
+  .nav-container {
+    position: absolute;
+    transform: scaleY(0);
+    height: 100vh;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s ease-in-out;
+
+    @media screen and (min-width: $max-width) {
+      transform: none;
+      position: relative;
+      height: $nav-height;
+      width: auto;
+      visibility: visible;
+    }
+  }
+
+  .main-nav {
+    z-index: 0;
+    background: var(--slides-bg);
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    @media screen and (min-width: $max-width) {
+      background: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & li {
+      width: 100%;
+      position: relative;
+      transition: background 0.2s ease-in-out;
+      padding: 16px 0px;
+
+      @media screen and (min-width: $max-width) {
+        min-width: 160px;
+        width: inherit;
+      }
+    }
+
+    & > li {
+      &:hover {
+        background-color: var(--accent-color);
+      }
+
+      &:focus-within {
+        background-color: var(--accent-color);
+      }
+
+      @media screen and (min-width: $max-width) {
+        width: inherit;
+
+        &:hover > ul {
+          visibility: visible;
+          height: 100%;
+          transform: scaleY(1);
+        }
+      }
+
+      & > a:focus {
+        & ~ ul {
+          visibility: visible;
+          height: 100%;
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
+  .sub-nav {
+    height: 0;
+    transform: scaleY(0);
+    transition: all 0.2s ease-in-out;
+    list-style: none;
+    padding: 0;
+
+    @media screen and (min-width: $max-width) {
+      visibility: collapse;
+      position: absolute;
+      justify-content: space-between;
+      top: 50px;
+    }
+
+    & > li {
+      background: var(--accent-color);
+    }
+
+    & > li:hover {
+      background: var(--main-color);
+    }
+  }
+}
