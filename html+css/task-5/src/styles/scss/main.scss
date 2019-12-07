@@ -3,6 +3,7 @@
 @import "./slides.scss";
 @import "./nav.scss";
 @import "./benefits.scss";
+@import "./team.scss";
 
 body {
   margin: 0px;
@@ -29,12 +30,6 @@ footer {
   }
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .main {
   background: var(--section-bg);
 }
@@ -56,4 +51,11 @@ footer {
 mark {
   background-color: var(--accent-color);
   color: var(--text-color);
+  padding: 4px;
+}
+
+section:not(.slides) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
