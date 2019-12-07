@@ -31,8 +31,17 @@ header {
     width: 35px;
 
     &:hover ~ .burger {
-      width: 35px;
+      width: 30px;
 
+      &:after {
+        width: 35px;
+      }
+      &::before {
+        width: 25px;
+      }
+    }
+
+    &:checked:hover ~ .burger {
       &:after {
         width: 35px;
       }

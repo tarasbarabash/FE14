@@ -13,9 +13,17 @@ footer {
   }
 
   .row {
-    display: flex;
+    min-width: 100%;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+    & > * {
+      min-width: 100px;
+    }
   }
 
   .icon {
