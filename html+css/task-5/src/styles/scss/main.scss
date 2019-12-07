@@ -4,10 +4,17 @@
 @import "./nav.scss";
 @import "./benefits.scss";
 @import "./team.scss";
-
+@import "./motto.scss";
+@import "./footer.scss";
 body {
   margin: 0px;
   min-height: 100%;
+}
+
+.icon {
+  font-size: 3rem;
+  padding: 16px;
+  color: var(--main-color);
 }
 
 main {
@@ -15,15 +22,9 @@ main {
   min-height: 100%;
 }
 
-footer {
-  position: relative;
-  background-color: aquamarine;
-  height: $footer-height;
-}
-
 .container {
   flex-direction: inherit;
-  width: 90%;
+  width: 95%;
 
   @media screen and (min-width: $max-width) {
     max-width: $max-width;
@@ -58,4 +59,17 @@ section:not(.slides) {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+
+  & > span:first-of-type {
+    color: var(--text-color);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 3.5rem;
+  }
 }

@@ -22,16 +22,8 @@ header {
   }
 
   .logo {
-    font-size: 1.5rem;
-    display: flex;
-    user-select: none;
-    align-items: center;
-
     & > span:first-of-type {
       color: var(--main-color);
-      font-size: 4rem;
-      font-weight: 800;
-      line-height: 3.5rem;
     }
   }
 

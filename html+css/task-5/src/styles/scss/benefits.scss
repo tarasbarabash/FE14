@@ -15,9 +15,9 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    & > .icon {
-      font-size: 3rem;
-      padding: 16px;
+
+    & > .action-btn {
+      background: transparent;
       color: var(--main-color);
     }
 
