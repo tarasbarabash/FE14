@@ -1,13 +1,9 @@
 $slides-number: 5;
 
 .slides {
-  height: 550px;
+  height: 400px + $nav-height;
   overflow: hidden;
   user-select: none;
-
-  @media screen and (max-height: 500px) {
-    height: 300px;
-  }
 }
 
 .slides-wrapper {
@@ -42,6 +38,14 @@ $slides-number: 5;
   height: 100%;
   background-color: var(--slides-bg);
 
+  &:nth-of-type(2n + 1) {
+    background-color: var(--footer-color);
+
+    & .action-btn {
+      background-color: var(--slides-bg);
+    }
+  }
+
   img {
     height: 100%;
     width: 100%;
@@ -49,9 +53,11 @@ $slides-number: 5;
   }
 
   &-info {
+    margin-top: $nav-height;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     height: inherit;
     display: flex;
     flex-direction: column;

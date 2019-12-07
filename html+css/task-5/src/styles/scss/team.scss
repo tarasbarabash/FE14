@@ -21,14 +21,13 @@
     padding: 16px;
     min-height: 330px;
     margin: 8px 8px;
-    outline: 2px solid var(--accent-color);
-    outline-offset: -10px;
     transition: all 0.5s ease-out;
 
     &:hover {
       background: var(--accent-color);
       color: var(--text-color);
       outline: 2px solid var(--text-color);
+      outline-offset: -10px;
     }
 
     .name {

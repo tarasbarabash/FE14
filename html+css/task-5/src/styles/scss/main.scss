@@ -6,6 +6,7 @@
 @import "./team.scss";
 @import "./motto.scss";
 @import "./footer.scss";
+@import "./map.scss";
 body {
   margin: 0px;
   min-height: 100%;
@@ -18,13 +19,12 @@ body {
 }
 
 main {
-  padding-top: $nav-height;
   min-height: 100%;
 }
 
 .container {
   flex-direction: inherit;
-  width: 95%;
+  width: 90%;
 
   @media screen and (min-width: $max-width) {
     max-width: $max-width;
