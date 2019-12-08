@@ -1,0 +1,54 @@
+@import "./variables.scss";
+@import "./header.scss";
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: beige;
+
+  & > *:not(header) {
+    flex: 1;
+  }
+
+  & > * {
+    align-self: center;
+    max-width: $max-width;
+    margin: $main-dimen $main-dimen * 2;
+  }
+
+  footer {
+    max-height: 100px;
+    text-align: center;
+  }
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: blue;
+  transition: all 0.2s ease-in;
+  font-weight: 700;
+
+  &:hover {
+    color: black;
+  }
+}
+
+a,
+a:hover {
+  &:before,
+  &:after {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+  }
+}
+
+h1,
+h2 {
+  color: blue;
+}
