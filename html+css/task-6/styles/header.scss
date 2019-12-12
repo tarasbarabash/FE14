@@ -1,0 +1,69 @@
+body > header {
+  @include flex-center(column);
+
+  nav {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav > h2 {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: inline;
+
+    &::after {
+      position: absolute;
+      content: "";
+      margin: auto;
+      width: 0;
+      height: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 12px solid blue;
+      margin-right: -$main-dimen;
+      transition: transform 1s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: rotate(180deg);
+    }
+
+    &:hover ~ ul {
+      @include display-nav();
+    }
+  }
+
+  ul {
+    @include flex-center(row);
+    padding: 0;
+    margin: 0;
+    height: 0;
+    transform: scaleY(0);
+    flex-wrap: wrap;
+    transition: all 0.2s ease;
+
+    &:hover {
+      @include display-nav();
+    }
+
+    li {
+      width: ($max-width - $main-dimen - 12 * 4) / 4;
+      height: 50px;
+      padding: $main-dimen;
+      @include flex-center(column);
+
+      a:first-of-type::before {
+        content: "Name: ";
+      }
+
+      a:nth-of-type(2)::before {
+        content: "Author: ";
+      }
+    }
+  }
+}

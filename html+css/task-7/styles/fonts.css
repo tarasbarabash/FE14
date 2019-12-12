@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Diablo Heavy";
+  src: url("../assets/fonts/diablo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Diablo Heavy", "Courier New", Courier, monospace;
+}
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,16 @@
+$max-width: 960px;
+$main-dimen: 16px;
+
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin display-nav {
+  padding: $main-dimen;
+  height: 100%;
+  transform: scaleY(1);
+}
