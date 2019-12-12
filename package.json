@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This project is available on [Github Pages](https://tarasbarabash.github.io/FE14)",
   "scripts": {
-    "build:homepage": "babel-node ./.common/build-homepage.js"
+    "build": "babel-node ./.common/build-homepage.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/node": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
