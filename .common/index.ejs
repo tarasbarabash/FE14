@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./.common/style.css" />
+  <title>FE14</title>
+</head>
+
+<body>
+  <nav>
+    <ul class="main-nav">
+      <li class="logo"><a href="#">FE14</a></li>
+      <li>
+        <ul class="sub-nav">
+          <li class="sub-item"><a href="#http">HTTP</a></li>
+          <li class="sub-item"><a href="#html">HTML + CSS</a></li>
+          <li class="sub-item"><a href="#js">JS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section id="http">
+      <h5>HTTP</h5>
+      <ul class="section-nav">
+        <li class="section-nav-item">
+          <a href="./http/task-1/wireshark-2.txt">Task 1</a>
+        </li>
+        <li class="section-nav-item">
+          <a href="https://github.com/tarasbarabash/FE14/tree/master/http/task-2" target="_blank">Task 2</a>
+        </li>
+      </ul>
+    </section>
+
+    <% const types = [...new Set(files.map(([type]) => type))];
+      for (let type of types) { %>
+    <section id="<%= type.indexOf("+") ? type.split("+")[0] : type %>">
+      <h5>
+        <%= type.toUpperCase() %>
+      </h5>
+      <ul class="section-nav">
+        <% const htmlFiles = files.filter(([i]) => i === type);
+          htmlFiles.forEach(i => { 
+            let [, task] = i;
+            task = `${task.charAt(0).toUpperCase()}${task.slice(1).replace("-", " ")}`;
+        %>
+        <li class="section-nav-item">
+          <a href="<%=i.join("/")%>"><%= task %></a>
+        </li>
+        <% }) %>
+      </ul>
+    </section>
+    <% }%>
+  </main>
+</body>
+
+</html>
