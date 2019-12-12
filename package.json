@@ -1,0 +1,30 @@
+{
+  "name": "fe14",
+  "version": "1.0.0",
+  "description": "This project is available on [Github Pages](https://tarasbarabash.github.io/FE14)",
+  "scripts": {
+    "build": "babel-node ./.common/build-homepage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarasbarabash/FE14.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarasbarabash/FE14/issues"
+  },
+  "homepage": "https://tarasbarabash.github.io/FE14",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/runtime": "^7.7.6",
+    "ejs": "^3.0.1",
+    "glob-promise": "^3.4.0"
+  }
+}

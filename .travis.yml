@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "stable"
+install: 
+  - npm install -production=false
+script:
+  - npm run build
+branches:
+  only:
+    - master
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  committer_from_gh: true
+  on:
+    branch: master
