@@ -1,0 +1,9 @@
+.map {
+  width: 100%;
+  height: 500px;
+
+  & > embed {
+    width: inherit;
+    height: inherit;
+  }
+}

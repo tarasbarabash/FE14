@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@font-face {
+  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
+  font-family: "Bebas Neue";
+}
+@font-face {
+  src: url("../fonts/Solway/Solway-Regular.ttf") format("truetype");
+  font-family: "Solway";
+}

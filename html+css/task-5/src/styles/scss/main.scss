@@ -1,0 +1,78 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./slides.scss";
+@import "./nav.scss";
+@import "./benefits.scss";
+@import "./team.scss";
+@import "./motto.scss";
+@import "./footer.scss";
+@import "./map.scss";
+@import "./feedback.scss";
+
+body {
+  margin: 0px;
+  min-height: 100%;
+}
+
+.icon {
+  font-size: 3rem;
+  padding: 16px;
+  color: var(--main-color);
+}
+
+main {
+  min-height: 100%;
+}
+
+.container {
+  flex-direction: inherit;
+  width: 90%;
+
+  @media screen and (min-width: $max-width) {
+    max-width: $max-width;
+  }
+}
+
+.main {
+  background: var(--section-bg);
+}
+
+.action-btn {
+  background-color: var(--main-color);
+  padding: 16px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+
+mark {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 4px;
+}
+
+section:not(.slides) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.logo {
+  user-select: none;
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+
+  & > span:first-of-type {
+    color: var(--text-color);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 3.5rem;
+  }
+}

@@ -1,0 +1,51 @@
+.radios {
+  font-family: "Bebas Neue";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-control {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-control input {
+  visibility: hidden;
+}
+
+.radio-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid green;
+  border-radius: 50%;
+}
+
+.input-control input:checked ~ .radio-btn {
+  background-color: lightgreen;
+}
+
+.input-control .radio-btn:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: green;
+}
+
+.radio-btn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.input-control input:checked ~ .radio-btn:after {
+  display: block;
+}

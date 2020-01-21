@@ -1,0 +1,12 @@
+@import "./fonts.css";
+@import "./breadcrumbs.css";
+@import "./radios.css";
+@import "./switch.css";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}

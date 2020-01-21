@@ -1,0 +1,37 @@
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Solway";
+}
+
+.toggle {
+  position: relative;
+  outline: none;
+  -webkit-appearance: none;
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #d9dadc;
+  border-radius: 50px;
+}
+
+.toggle:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.toggle:checked {
+  box-shadow: inset 20px 0 0 0 green;
+  border-color: green;
+}
+
+.toggle:checked:after {
+  left: 20px;
+}

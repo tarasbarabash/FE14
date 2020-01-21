@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task - 2</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="header">
+            <h1>
+              Guess the number
+            </h1>
+            <p>
+              I've just randomly selected a number from 0 to 100. Can you guess
+              it?
+            </p>
+          </div>
+          <form id="guess-form">
+            <span id="msg" class="hidden"></span>
+            <label for="guess">Your guess:</label>
+            <input
+              type="number"
+              id="guess"
+              required
+              min="0"
+              max="100"
+              placeholder="50"
+            />
+            <input type="submit" value="Check" id="submit-guess" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+$nav-height: 64px;
+$footer-height: 200px;
+$max-width: 960px;
+$slides-height: 550px;
+
+$colors: (
+  main-color: #016fb9,
+  accent-color: rgb(24, 124, 191),
+  accent-color-light: rgba(24, 124, 191, 0.2),
+  slides-bg: #353531,
+  text-color: white,
+  footer-color: #125b8b,
+  footer-link-color: #c1c1c1
+);
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+}

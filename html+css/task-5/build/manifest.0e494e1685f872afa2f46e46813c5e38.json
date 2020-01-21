@@ -1,0 +1,32 @@
+{
+  "icons": [
+    {
+      "src": "assets/icons/icon_512x512.c17c768f187472abc7b1586b1a342e70.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_384x384.80d3e95793f725d8bdef9b100117f45b.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_152x152.0204faf9265b143447fbc078d8a98bd9.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_72x72.3ba734f47fa793e92d2f4f22f2a881c0.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "name": "Task - 5",
+  "short_name": "A company",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "index.html",
+  "description": "A company",
+  "background_color": "#fff",
+  "theme_color": "#fff"
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task - 3</title>
+    <style>
+      body {
+        font-size: 18pt;
+        padding: 12px 32px;
+      }
+
+      @media screen and (max-width: 500px) {
+        #result {
+          max-width: 100vw;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        #result {
+          max-width: 500px;
+        }
+      }
+
+      table {
+        width: 100%;
+        border: 1px solid black;
+        overflow: auto;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        width: 33%;
+        text-align: center;
+      }
+
+      tr td:first-of-type {
+        font-weight: 800;
+      }
+
+      input {
+        font-size: inherit;
+      }
+
+      form {
+        padding: 16px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="mask">Mask:</label>
+      <input type="text" id="mask" value="1u0d2u3d" />
+      <input type="submit" id="submit" />
+    </form>
+    <div id="result"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+$min-xs-width: 900px;
+$min-xs-height: 500px;
+$header-height: 120px;
+$bold-text-weight: 600;
+$main-font: "Roboto";
+$header-font: "Pacifico";
+
+$main-dimen: 16px;
+$btn-min-width: 64px;
+
+$max-width: 1200px;
+
+$anchor-border: 3px;
+
+$colors: (
+  main-color: wheat,
+  main-text-color: black,
+  dark-main-color: darken(wheat, 20),
+  overlay-color: rgba(255, 255, 255, 0.9),
+  reject-color: lightcoral,
+  nav-color: rgba(255, 255, 255, 1),
+  disabled-color: lightgray,
+  main-link-color: black,
+  background-color: white,
+  footer-color: darken(wheat, 20),
+  nav-shadow-color: rgba(212, 212, 212, 0.75)
+);
+
+$dark-colors: (
+  main-color: darken(wheat, 20),
+  main-text-color: #fff,
+  dark-main-color: darken(wheat, 20),
+  overlay-color: rgba(18, 18, 18, 0.9),
+  reject-color: lightcoral,
+  nav-color: #121212,
+  disabled-color: lightgray,
+  main-link-color: white,
+  background-color: #121212,
+  footer-color: rgb(42, 42, 42),
+  nav-shadow-color: rgba(0, 0, 0, 1)
+);
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+}
+
+[data-theme="dark"] {
+  @each $name, $color in $dark-colors {
+    --#{$name}: #{$color};
+  }
+}

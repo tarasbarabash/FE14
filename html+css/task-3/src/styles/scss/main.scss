@@ -1,0 +1,391 @@
+@import "./variables.scss";
+// @import "./reset.scss";
+@import "./fonts.scss";
+
+html {
+  scroll-behavior: smooth;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+}
+
+::selection {
+  background-color: var(--main-color);
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.animate {
+  transition: background-color 0.3s ease-in-out;
+}
+
+main {
+  padding-top: $header-height;
+  flex-grow: 1;
+
+  @media (max-height: $min-xs-height) {
+    padding-top: 0px;
+  }
+}
+
+mark {
+  font-size: 1.2rem;
+  padding: 2px;
+  background-color: var(--main-color);
+  font-weight: $bold-text-weight;
+}
+
+a,
+a:visited,
+a:hover {
+  display: inline-block;
+  color: var(--main-link-color);
+  text-decoration: none;
+}
+
+.round-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  @media (max-width: $min-xs-width) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $min-xs-width) {
+    flex-direction: column;
+  }
+}
+
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+
+body {
+  font-family: $main-font;
+}
+
+p {
+  padding: $main-dimen;
+  line-height: 1.5rem;
+}
+
+h2 {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+  font-family: $header-font;
+  color: var(--main-text-color);
+  font-size: 2rem;
+}
+
+figcaption {
+  padding: $main-dimen;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.container {
+  width: 90%;
+  max-width: $max-width;
+  display: flex;
+  padding: $main-dimen;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+dialog {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: var(--overlay-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.dialog_visible {
+  transform: scale(1);
+  visibility: visible;
+}
+
+.dialog_hidden {
+  transform: scale(0);
+  visibility: hidden;
+}
+
+.buttons {
+  flex-direction: row;
+
+  .deny {
+    background-color: var(--reject-color);
+  }
+}
+
+nav {
+  z-index: 2;
+  background-color: var(--nav-color);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $header-height;
+  box-shadow: 0px 2px 10px 0px var(--nav-shadow-color);
+
+  @media (max-height: $min-xs-height) {
+    position: relative;
+  }
+
+  &:hover {
+    background-color: var(--nav-color);
+  }
+
+  .logo {
+    font-family: $header-font;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: $main-dimen;
+    display: flex;
+
+    a {
+      transition: all 0.2s ease-in-out;
+    }
+
+    a:hover {
+      color: var(--dark-main-color);
+      &::after {
+        border: $anchor-border solid var(--dark-main-color);
+      }
+    }
+
+    .mode {
+      cursor: pointer;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      justify-self: flex-start;
+      border-radius: 50%;
+
+      &.light {
+        background-color: #efefef;
+      }
+
+      &.dark {
+        background-color: #212121;
+      }
+    }
+  }
+
+  .main-nav {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sub-nav {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+
+    .nav-item {
+      padding: 8px;
+    }
+  }
+}
+
+details {
+  summary {
+    font-size: 1.3rem;
+    font-family: $header-font;
+    padding: $main-dimen 0px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  time {
+    padding: 4px;
+    font-weight: $bold-text-weight;
+  }
+
+  li {
+    margin-left: $main-dimen;
+    padding: 8px;
+    list-style: circle;
+  }
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr,
+  td,
+  th {
+    border: 2px solid var(--main-color);
+    padding: $main-dimen;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  th,
+  td:nth-of-type(1) {
+    font-weight: $bold-text-weight;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    font-size: 1.2rem;
+    padding: $main-dimen 0px;
+  }
+
+  textarea {
+    height: 200px;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    resize: none;
+    color: var(--text-color);
+    padding: $main-dimen;
+    font-family: $main-font;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="text"] {
+    border-radius: 5px;
+    border: 3px solid var(--main-color);
+    background-color: var(--background-color);
+    padding: 1rem;
+    color: var(--text-color);
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="submit"] {
+    align-self: flex-end;
+    display: block;
+  }
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+  margin: $main-dimen 0px;
+  padding: 12px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 8px;
+  font-weight: $bold-text-weight;
+  min-width: $btn-min-width;
+  transition: all 1s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: var(--dark-main-color);
+  }
+
+  &:disabled {
+    background-color: var(--disabled-color);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-color);
+
+  .container {
+    align-items: center;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+a {
+  &::after {
+    content: "";
+    display: block;
+    visibility: none;
+    transition: all 0.2s ease-in-out 0.2s;
+    visibility: hidden;
+    border-bottom: $anchor-border solid var(--main-color);
+    transform: scale(0);
+  }
+
+  &:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+
+.anchor {
+  position: absolute;
+  margin: -$header-height;
+}

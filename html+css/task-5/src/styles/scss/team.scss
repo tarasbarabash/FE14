@@ -1,0 +1,49 @@
+.team-section {
+  background-color: var(--accent-color-light);
+}
+
+.team {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .team-member {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    position: relative;
+    width: 250px;
+    background: var(--text-color);
+    padding: 16px;
+    min-height: 330px;
+    margin: 8px 8px;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      background: var(--accent-color);
+      color: var(--text-color);
+      outline: 2px solid var(--text-color);
+      outline-offset: -10px;
+    }
+
+    .name {
+      letter-spacing: 0.2rem;
+      margin: 0;
+    }
+
+    .round-img {
+      position: relative;
+      height: 185px;
+      width: 185px;
+      border-radius: 50%;
+    }
+
+    figcaption {
+      padding: 16px 0;
+    }
+  }
+}

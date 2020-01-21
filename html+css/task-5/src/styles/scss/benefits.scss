@@ -1,0 +1,60 @@
+.benefits {
+  & ~ & {
+    padding: 16px;
+  }
+  user-select: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 1fr;
+  gap: 2em;
+  align-content: space-around;
+  justify-content: space-around;
+
+  .benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    & > .action-btn {
+      background: transparent;
+      color: var(--main-color);
+    }
+
+    h1 {
+      margin: 0.2rem;
+    }
+
+    &.grid-2 {
+      height: 100%;
+      grid-column: 2 span;
+      position: relative;
+      color: var(--text-color);
+      font-weight: 500;
+      min-height: 350px;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-summary {
+      & > * {
+        padding: 16px;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      background: linear-gradient(var(--main-color), var(--accent-color-light));
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+    }
+  }
+}
